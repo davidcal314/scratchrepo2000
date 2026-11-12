@@ -17,13 +17,23 @@ print("hello python")
 # get the length of something with len()
 # else if is elif
 # instead of end, we know where the end is just by seeing where the indentation changes
-
+# in python, each assertion tests either that the right thing was returned or that the right thing was printed, 
+# but testing prints is hard
 def greet(name: str) -> None:
     """produces Hello, name!"""
     print("Hello, " + name + "!")
 greet("David")
-greet("Asif")
-greet("Joyce")
+greet("Chase")
+greet("Jack")
+greet("Josef")
+greet("Hasan")
+greet("LB")
+greet("Cole")
+greet("Trevor")
+greet("Assaf")
+greet("Drew")
+greet("No Mercy Morse")
+
 
 
 def add_shipping(order_amt : int) -> int:
@@ -39,4 +49,25 @@ def add_shipping(order_amt : int) -> int:
 add_shipping(25)
 add_shipping(1)
 
+
+numbers = list (range(1,11))
+print("1.", numbers)
+
+
+squares = list(map(lambda n: n ** 2, numbers))
+print("2.", squares)
+
+
+# 3. all_even
+def all_even(nums: list) -> list:
+    """Return a list of all even numbers from the input list."""
+    return [n for n in nums if n % 2 == 0]
+
+
+assert all_even([]) == []
+assert all_even([1, 3, 5]) == []
+assert all_even([1, 2, 3, 4]) == [2, 4]
+assert all_even([-2, -1, 0]) == [-2, 0]
+print("3.", all_even(numbers))
+# [2, 4, 6, 8, 10]
 
